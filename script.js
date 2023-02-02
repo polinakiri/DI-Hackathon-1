@@ -41,15 +41,17 @@ const words = [
     const userLetter = document.querySelector(".letter").value;
 
     const cell = document.querySelector(".random-word");
+
+    let msg = document.querySelector(".message");
    
     if (word.match(userLetter) != null) {
         let correctLetter = word.match(userLetter)[0];
         const indx = word.indexOf(correctLetter);
         cell.childNodes[indx].value = correctLetter;
-        console.log(cell.childNodes[indx]);
+        msg.innerText = `Good guess! The word has the letter ${userLetter}`;
     } else {
         const listOfTries = document.querySelector(".tries");
         listOfTries.appendChild(document.createTextNode(`${userLetter} `));
-        console.log(listOfTries);
+        msg.innerText = `Oh no! The word has not the letter ${userLetter}`;
     }
   }
