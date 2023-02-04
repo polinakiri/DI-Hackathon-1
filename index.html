@@ -15,11 +15,11 @@
         <p class="message">Let's play!</p>
         <div class="random-word"></div>
         <p class="hint">Hint: </p>
-        <p class="remaining"></p>
+        <p class="remaining">Remaining guesses: </p>
         <ul class="tries">Wrong letters: </ul>
         <form>
             <lable for="letter">Type a letter:</lable>
-            <input type="text" name="letter" class="letter">
+            <input type="text" name="letter" class="letter" onfocus="this.value=''">
             <button class="guess-btn">Guess</button> 
         </form>
         <button class="start-btn">Start a new game</button>

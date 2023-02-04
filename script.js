@@ -38,11 +38,15 @@ const words = [
   function game (event) {
     event.preventDefault();
 
-    const userLetter = document.querySelector(".letter").value;
+    let userLetter = document.querySelector(".letter").value;
 
     const cell = document.querySelector(".random-word");
 
     let msg = document.querySelector(".message");
+
+    const listOfTries = document.querySelector(".tries");
+
+    const li = document.createElement("li");
    
     if (word.match(userLetter) != null) {
         let correctLetter = word.match(userLetter)[0];
@@ -50,8 +54,16 @@ const words = [
         cell.childNodes[indx].value = correctLetter;
         msg.innerText = `Good guess! The word has the letter ${userLetter}`;
     } else {
-        const listOfTries = document.querySelector(".tries");
-        listOfTries.appendChild(document.createTextNode(`${userLetter} `));
+        li.appendChild(document.createTextNode(`${userLetter} `));
+        listOfTries.appendChild(li);
         msg.innerText = `Oh no! The word has not the letter ${userLetter}`;
     }
+
+    let maxNumOfTries = word.length + 4;
+    let numOfTries = listOfTries.childNodes.length - 1;
+    const remaining = maxNumOfTries - numOfTries;
+
+    const remPara = document.querySelector(".remaining");
+    remPara.append(document.createTextNode(remaining));
+    console.log();
   }
