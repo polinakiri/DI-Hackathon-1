@@ -10,7 +10,7 @@ const words = [
   ];
   
   let word = [];
-  let hint = [];
+  let hint;
   const randomWordBox = document.querySelector(".random-word");
   const hintPara = document.querySelector(".hint");
   
@@ -65,5 +65,22 @@ const words = [
 
     const remPara = document.querySelector(".remaining");
     remPara.append(document.createTextNode(remaining));
-    console.log();
-  }
+
+//     let allInputs = cell.querySelectorAll("input");
+//     // console.log(allInputs);
+
+
+//     for (let x of allInputs) {
+//     console.log(x.value);
+//     }
+
+//     if (remaining === 0) {
+//         alert("Game over");
+//     } else if (x.value != null) {
+//         alert("winner")
+//     }
+//   }
+
+
+  const newGame = document.querySelector(".start-btn");
+  newGame.addEventListener("click", randomWord);
