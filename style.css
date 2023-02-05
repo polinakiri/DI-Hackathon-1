@@ -121,9 +121,13 @@ li {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 821px) {
     .header, .game {
         width: 90vw;
+    }
+
+    .game {
+        height: 50vh;
     }
 
     form button, form input, .start-btn {
@@ -132,5 +136,18 @@ li {
 
     form {
         padding-top: 30px;
+    }
+}
+
+@media (max-width: 450px) {
+    .game {
+        height: 65vh;
+    }
+    form {
+        padding-top: 10px;
+    }
+
+    .box {
+        margin-top: 15px;
     }
 }
