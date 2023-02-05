@@ -3,4 +3,119 @@
     margin: 0;
     padding: 0;
     border: 0px solid black;
+    font-family: Rubik;
+}
+
+body {
+    background-color: #D8D7D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    border: 0px solid red;
+}
+
+.header, .game {
+    width: 40vw;
+    margin-bottom: 1px;
+    background-color: #FDFDFD;
+}
+
+.header {
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.game {
+    border-radius: 0 0 10px 10px;
+    height: 65vh;
+    padding: 25px;
+}
+
+.message {
+    text-align: center;
+    padding: 10px;
+}
+
+.random-word {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.random-word > input {
+    border: 1px solid #ADB3BC;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.hint, .remaining, .tries {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form input {
+    border: 1px solid #050606;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    width: 30%;
+    text-align: center;
+}
+
+form button {
+    background-color: #050606;
+    color: #FDFDFD;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px 0;
+    width: 30%;
+    cursor: pointer;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.start-btn {
+    background-color: #ADB3BC;
+    color: #FDFDFD;
+    border-radius: 5px;
+    padding: 7px;
+    margin: 5px 0;
+    width: 30%;
+    cursor: pointer;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding: 0 5px;
 }
