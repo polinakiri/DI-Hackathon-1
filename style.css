@@ -119,3 +119,18 @@ ul {
 li {
     padding: 0 5px;
 }
+
+
+@media (max-width: 900px) {
+    .header, .game {
+        width: 90vw;
+    }
+
+    form button, form input, .start-btn {
+        width: 50%;
+    }
+
+    form {
+        padding-top: 30px;
+    }
+}
